@@ -11,7 +11,7 @@ find_package(Qt5 REQUIRED COMPONENTS
         Widgets
         )
 
-add_executable(Button-example
+add_executable(OnOffButton-example
         main.cpp
         button.cpp
         button.h
@@ -22,7 +22,7 @@ add_executable(Button-example
         power_on.png
         )
 
-target_link_libraries(Button-example
+target_link_libraries(OnOffButton-example
         PRIVATE
         Qt5::Core
         Qt5::Gui

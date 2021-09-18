@@ -1,6 +1,8 @@
 
-add_subdirectory(Button)
-add_subdirectory(SwicthWidget)
-add_subdirectory(ToggleButton)
-add_subdirectory(ToggleSwitch)
+add_subdirectory(OnOffButton)
+add_subdirectory(SwicthButton)
+add_subdirectory(ToggleBasic)
+add_subdirectory(ToggleOnOff)
+add_subdirectory(ToggleTrueFalse)
+add_subdirectory(ToggleYesNo)
 

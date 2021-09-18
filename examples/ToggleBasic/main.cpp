@@ -1,4 +1,4 @@
-#include "togglebutton.h"
+#include "qcswitchwidget.h"
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 

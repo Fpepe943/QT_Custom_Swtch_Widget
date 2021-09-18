@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(ToggleButton VERSION 0.1 LANGUAGES CXX)
+project(ToggleSwitch VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -29,36 +29,40 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
 set(PROJECT_SOURCES
         main.cpp
-        togglebutton.cpp
-        togglebutton.h
-        togglebutton.ui
+        switchbutton.ui
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(ToggleButton
+    qt_add_executable(ToggleYesNo
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
 else()
     if(ANDROID)
-        add_library(ToggleButton SHARED
+        add_library(ToggleYesNo SHARED
             ${PROJECT_SOURCES}
         )
     else()
-        add_executable(ToggleButton
+        add_executable(ToggleYesNo
             ${PROJECT_SOURCES}
         )
     endif()
 endif()
 
-target_link_libraries(ToggleButton PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(ToggleYesNo
+        PRIVATE
+        Qt5::Core
+        Qt5::Gui
+        Qt${QT_VERSION_MAJOR}::Widgets
+        QCustomSwtchWidget
+        )
 
-set_target_properties(ToggleButton PROPERTIES
+set_target_properties(ToggleYesNo PROPERTIES
     MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
 )
 
 if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(ToggleButton)
+    qt_finalize_executable(ToggleYesNo)
 endif()

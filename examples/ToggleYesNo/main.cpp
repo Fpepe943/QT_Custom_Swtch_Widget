@@ -1,7 +1,7 @@
-#include "switchbutton.h"
-
 #include <QApplication>
 #include <QHBoxLayout>
+#include "qcswitchwidget.h"
+
 
 int main(int argc, char *argv[])
 {
@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     QHBoxLayout layout;
     widget->setLayout(&layout);
     widget->setMinimumSize(100,50);
-    SwitchButton* sbtn = new SwitchButton(widget, SwitchButton::Style::ONOFF); // Default style is Style::ONOFF
+    SwitchButton* sbtn = new SwitchButton(widget, SwitchButton::Style::YESNO); // Default style is Style::ONOFF
     bool current = sbtn->value();
     sbtn->setValue(!current);
     layout.addWidget(sbtn);

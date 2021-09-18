@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>SwitchWidget.qss</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>toggle_off.png</file>
+        <file>toggle_on.png</file>
+    </qresource>
+</RCC>

@@ -7,18 +7,6 @@ find_package(Qt5 REQUIRED COMPONENTS
         Widgets
         )
 
-add_library(qcgaugewidget SHARED
-        include/qcswitchwidget.h
-        src/qcswitchwidget.cpp
-        )
-
-target_include_directories(qcgaugewidget
-        PUBLIC
-        include
-        PRIVATE
-        include/qcgaugewidget
-        )
-
 target_compile_definitions(qcgaugewidget
         PRIVATE
         QGV_EXPORT
@@ -31,7 +19,6 @@ target_link_libraries(qcgaugewidget
         Qt5::Widgets
         )
 
-add_library(QcGaugeWidget ALIAS qcgaugewidget)
 
 install(TARGETS qcgaugewidget LIBRARY
         RUNTIME DESTINATION bin

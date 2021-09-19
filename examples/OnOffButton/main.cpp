@@ -1,12 +1,11 @@
-#include "button.h"
-
 #include <QApplication>
+#include <qcswitchwidget.h>
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    Button w;
-    w.setTextLabel("Cabin light");
+    ToggleButton w;
+    w.setStylesheet("../../../examples/OnOffButton/power_on.png", "../../../examples/OnOffButton/power_off.png");
     w.show();
     return a.exec();
 }

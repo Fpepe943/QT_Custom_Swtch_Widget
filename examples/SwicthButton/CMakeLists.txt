@@ -13,14 +13,6 @@ find_package(Qt5 REQUIRED COMPONENTS
 
 add_executable(SwitchButton-example
         main.cpp
-        SwicthWidget.pro
-        SwicthWidget.qrc
-        switchwidget.cpp
-        switchwidget.h
-        SwitchWidget.qss
-        switchwidget.ui
-        toggle_off.png
-        toggle_on.png
         )
 
 target_link_libraries(SwitchButton-example
@@ -28,4 +20,5 @@ target_link_libraries(SwitchButton-example
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
+        QCustomSwtchWidget
         )

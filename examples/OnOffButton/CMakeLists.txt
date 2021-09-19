@@ -13,13 +13,6 @@ find_package(Qt5 REQUIRED COMPONENTS
 
 add_executable(OnOffButton-example
         main.cpp
-        button.cpp
-        button.h
-        Button.qss
-        button.ui
-        customButton.qrc
-        power_off.png
-        power_on.png
         )
 
 target_link_libraries(OnOffButton-example
@@ -27,4 +20,5 @@ target_link_libraries(OnOffButton-example
         Qt5::Core
         Qt5::Gui
         Qt5::Widgets
+        QCustomSwtchWidget
         )

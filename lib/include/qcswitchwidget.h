@@ -38,6 +38,8 @@
 #include <QPropertyAnimation>
 #include <QAbstractButton>
 #include <QMouseEvent>
+#include <QStyleOption>
+#include <QPushButton>
 
 #if defined(QCSWITCH_COMPILE_LIBRARY)
 #  define QCSWITCH_DECL  Q_DECL_EXPORT
@@ -154,13 +156,14 @@ private:
 
 
 };
-
+/*
 class QCSWITCH_DECL ToggleButton :public QAbstractButton
 {
-Q_OBJECT
+    Q_OBJECT
     Q_PROPERTY(int mOffset READ offset WRITE setOffset);
 public:
     explicit ToggleButton(int trackRadius, int thumbRadius, QWidget* parent = nullptr);
+    void setStylesheet(QWidget*, QPushButton*, QString, QString);
     ~ToggleButton();
 
     QSize sizeHint() const;
@@ -191,5 +194,24 @@ private:
     QHash<bool, QString> mThumbText;
 
 };
+*/
+//static QCSWITCH_DECL void setStylesheet(QWidget*, QPushButton*, QString, QString);
+static QCSWITCH_DECL void setStylesheet(QWidget*, QString );
+
+class QCSWITCH_DECL ToggleButton :public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit ToggleButton(QWidget* parent = nullptr);
+    ~ToggleButton();
+    void setStylesheet(QString, QString);
+    QLabel* addLabel(float);
+
+private:
+    QPushButton* pushButton;
+};
+
+
 
 #endif //QCUSTOMSWITCHWIDGET_QCSWITCHWIDGET_H

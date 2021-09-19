@@ -1,7 +1,6 @@
 
 add_subdirectory(OnOffButton)
 add_subdirectory(SwicthButton)
-add_subdirectory(ToggleBasic)
 add_subdirectory(ToggleOnOff)
 add_subdirectory(ToggleTrueFalse)
 add_subdirectory(ToggleYesNo)

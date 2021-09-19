@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/qss">
-        <file>Button.qss</file>
-    </qresource>
-    <qresource prefix="/images">
-        <file>power_off.png</file>
-        <file>power_on.png</file>
-    </qresource>
-</RCC>

@@ -323,7 +323,7 @@ void SwitchButton::mousePressEvent(QMouseEvent*)
 
     // Assigning new current value
     _value = !_value;
-    emit valueChanged(_value);
+   // emit valueChanged(_value);
 }
 void SwitchButton::setEnabled(bool flag)
 {
@@ -495,7 +495,6 @@ void ToggleButton::mouseReleaseEvent(QMouseEvent  *e)
         mAnimation->start();
     }
 }
-
 void ToggleButton::enterEvent(QEvent * event)
 {
     setCursor(Qt::PointingHandCursor);

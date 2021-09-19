@@ -126,9 +126,6 @@ public:
     //-- Getters
     bool value() const;
 
-signals:
-    void valueChanged(bool newValue);
-
 private:
     bool _value;
     int  _duration;

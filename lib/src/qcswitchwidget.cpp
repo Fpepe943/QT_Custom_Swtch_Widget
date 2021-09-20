@@ -251,7 +251,6 @@ SwitchButton::~SwitchButton()
     delete _labelon;
     delete __btn_move;
     delete __back_move;
-    //delete ui;
 }
 void SwitchButton::paintEvent(QPaintEvent*)
 {
@@ -290,7 +289,6 @@ void SwitchButton::mousePressEvent(QMouseEvent*)
 
     __btn_move->stop();
     __back_move->stop();
-
     __btn_move->setDuration(_duration);
     __back_move->setDuration(_duration);
 
@@ -384,9 +382,7 @@ ToggleButton::ToggleButton(QWidget* parent): QWidget(parent)
 }
 
 ToggleButton::~ToggleButton()
-{
-
-}
+{}
 
 void ToggleButton::setStylesheet(QString iconCheckPath, QString iconUncheckPath)
 {
@@ -412,12 +408,8 @@ void ToggleButton::setStylesheet(QString iconCheckPath, QString iconUncheckPath)
 QLabel* ToggleButton::addLabel(float position)
 {
     auto item = new QLabel(this);
-    //item->setPosition(position);
-    //mItems.append(item);
     return item;
 }
-
-
 
 static void setStylesheet(QWidget* widget,QString styleSheet)
 {

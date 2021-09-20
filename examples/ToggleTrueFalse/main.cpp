@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
     QHBoxLayout layout;
     widget->setLayout(&layout);
     widget->setMinimumSize(100,50);
-    SwitchButton* sbtn = new SwitchButton(widget, SwitchButton::Style::TRUEFALSE); // Default style is Style::ONOFF
+    SwitchButton* sbtn = new SwitchButton(widget, SwitchButton::Style::TRUEFALSE);
     bool current = sbtn->value();
     sbtn->setValue(!current);
     layout.addWidget(sbtn);

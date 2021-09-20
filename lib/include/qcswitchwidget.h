@@ -52,13 +52,9 @@
 class QCSWITCH_DECL SwitchBackground : public QWidget
 {
     Q_OBJECT
-    Q_DISABLE_COPY(SwitchBackground)
-
 public:
     explicit SwitchBackground(QWidget* parent = nullptr, QColor color = QColor(154, 205, 50), bool rect = false);
     ~SwitchBackground() override;
-
-    //-- QWidget methods
     void paintEvent(QPaintEvent* event) override;
     void setEnabled(bool);
 
@@ -75,14 +71,10 @@ private:
 
 class QCSWITCH_DECL SwitchCircle : public QWidget
 {
-Q_OBJECT
-    Q_DISABLE_COPY(SwitchCircle)
-
+    Q_OBJECT
 public:
     explicit SwitchCircle(QWidget* parent = nullptr, QColor color = QColor(255, 255, 255), bool rect = false);
     ~SwitchCircle() override;
-
-    //-- QWidget methods
     void paintEvent(QPaintEvent* event) override;
     void setEnabled(bool);
 
@@ -101,8 +93,6 @@ private:
 class QCSWITCH_DECL SwitchButton : public QWidget
 {
     Q_OBJECT
-    //Q_DISABLE_COPY(SwitchButton)
-
 public:
     enum Style
     {
@@ -114,18 +104,12 @@ public:
 
 public:
     SwitchButton(QWidget *parent = nullptr, Style style = Style::ONOFF);
-
     ~SwitchButton();
 
-    //-- QWidget methods
     void mousePressEvent(QMouseEvent *) override;
     void paintEvent(QPaintEvent* event) override;
     void setEnabled(bool);
-
-    //-- Setters
     void setValue(bool);
-
-    //-- Getters
     bool value() const;
 
 private:
@@ -142,7 +126,6 @@ private:
     int    _tol;
     int    _borderradius;
 
-    // This order for definition is important (these widgets overlap)
     QLabel*           _labeloff;
     SwitchBackground* _background;
     QLabel*           _labelon;
@@ -153,55 +136,13 @@ private:
     QPropertyAnimation* __btn_move;
     QPropertyAnimation* __back_move;
     void _update();
-
-
 };
-/*
-class QCSWITCH_DECL ToggleButton :public QAbstractButton
-{
-    Q_OBJECT
-    Q_PROPERTY(int mOffset READ offset WRITE setOffset);
-public:
-    explicit ToggleButton(int trackRadius, int thumbRadius, QWidget* parent = nullptr);
-    void setStylesheet(QWidget*, QPushButton*, QString, QString);
-    ~ToggleButton();
 
-    QSize sizeHint() const;
-
-protected:
-    void paintEvent(QPaintEvent *) ;
-    void resizeEvent(QResizeEvent*) ;
-    void mouseReleaseEvent(QMouseEvent  *) ;
-    void enterEvent(QEvent *event) ;
-    void setChecked(bool checked);
-
-    int offset();
-    void setOffset(int value);
-
-private:
-    qreal mOffset;
-    qreal mBaseOffset;
-    qreal mMargin;
-    qreal mTrackRadius;
-    qreal mThumbRadius;
-    qreal mOpacity;
-    QPropertyAnimation* mAnimation;
-
-    QHash<bool, qreal> mEndOffset;
-    QHash<bool, QBrush> mTrackColor;
-    QHash<bool, QBrush> mThumbColor;
-    QHash<bool, QColor> mTextColor;
-    QHash<bool, QString> mThumbText;
-
-};
-*/
-//static QCSWITCH_DECL void setStylesheet(QWidget*, QPushButton*, QString, QString);
 static QCSWITCH_DECL void setStylesheet(QWidget*, QString );
 
 class QCSWITCH_DECL ToggleButton :public QWidget
 {
     Q_OBJECT
-
 public:
     explicit ToggleButton(QWidget* parent = nullptr);
     ~ToggleButton();
@@ -211,7 +152,6 @@ public:
 private:
     QPushButton* pushButton;
 };
-
 
 
 #endif //QCUSTOMSWITCHWIDGET_QCSWITCHWIDGET_H

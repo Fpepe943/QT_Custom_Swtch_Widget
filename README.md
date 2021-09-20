@@ -18,12 +18,10 @@ When the solution is correctly loaded, do the following to build its projects:
 - Run
 
 ### Widgets
-- Button  
-![Button](/ReadMeImages/Button.png)  
-- SwitchWidget  
-![SwitchWidget](/ReadMeImages/SwitchWidget.png)  
-- ToggleButton  
-![ToggleButton](/ReadMeImages/ToggleBotton.png)  
+- OnOffButton  
+![Button](/ReadMeImages/OnOffButton.png)  
+- SwitchButton  
+![SwitchWidget](/ReadMeImages/SwitchButton.png)  
 - ToggleSwitch  
 ![ToggleSwitch](/ReadMeImages/ToggleSwitch.png)  
 
